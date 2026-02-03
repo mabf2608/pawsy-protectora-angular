@@ -1,0 +1,7 @@
+{
+  "name": "pawsy-protectora",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

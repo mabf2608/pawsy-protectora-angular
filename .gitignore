@@ -1,0 +1,79 @@
+# Specifies intentionally untracked files to ignore when using Git
+# http://git-scm.com/docs/gitignore
+
+# Temporary files
+*~
+*.sw[mnpcod]
+.tmp
+*.tmp
+*.tmp.*
+UserInterfaceState.xcuserstate
+$RECYCLE.BIN/
+
+# Logs
+*.log
+log.txt
+npm-debug.log
+yarn-error.log
+testem.log
+libpeerconnection.log
+
+# Angular / build artifacts
+/dist
+/tmp
+/out-tsc
+/bazel-out
+/.angular
+/.angular/cache
+/.sourcemaps
+/.versions
+/coverage
+
+# Ionic
+/.ionic
+/www
+/platforms
+/plugins
+
+# Node
+/node_modules
+/connect.lock
+
+# IDEs and editors
+.idea/
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-project
+*.sublime-workspace
+
+# Visual Studio Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history/*
+
+# Nx
+/.nx
+/.nx/cache
+
+# Sass cache
+.sass-cache/
+
+# Typings (old Angular)
+/typings
+ 
+# Firebase
+.firebase/
+
+# Environment files (if used in the future)
+.env
+.env.local
+
+# System files
+.DS_Store
+Thumbs.db
