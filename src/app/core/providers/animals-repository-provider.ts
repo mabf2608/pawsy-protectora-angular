@@ -6,14 +6,17 @@ import { BACKEND, BackendType } from "../tokens/backend.token";
 import { AnimalsRepository } from "../../domain/repositories/animals.repository";
 import { AnimalsMockRepository } from "../../data/repositories/animals-mock.repository";
 
+import { AnimalsStrapiRepository } from "../../data/repositories/animals-strapi.repository";
+
 export function animalsRepositoryFactory( backend: BackendType): AnimalsRepository {
 
     switch(backend) {
         case 'mock':
         case 'strapi':
+            return null as any;
         case 'firebase':
 
-        degault: 
+        default: 
             return new AnimalsMockRepository();
     }
 
@@ -22,7 +25,6 @@ export function animalsRepositoryFactory( backend: BackendType): AnimalsReposito
 export const ANIMALS_REPOSITORY_PROVIDER: Provider = {
 
     provide: ANIMALS_REPOSITORY,
-    useFactory: animalsRepositoryFactory,
-    deps: [BACKEND]
+    useClass: AnimalsStrapiRepository
 
 }

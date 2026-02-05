@@ -1,15 +1,5 @@
-export enum AdoptionStatus {
-    AVAILABLE = 'available',
-    ADOPTED = 'adopted',
-    SPONSORED = 'sponsored'
-}
-
-export enum AnimalSpecies {
-    DOG = 'dog',
-    CAT = 'cat',
-    RABBIT = 'rabbit',
-    OTHER = 'other'
-}
+import { AdoptionStatus } from "./enums/adoption-status.enum";
+import { AnimalSpecies } from "./enums/animal-species.enum";
 
 export interface Animal {
     id: string;
