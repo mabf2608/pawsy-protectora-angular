@@ -1,12 +1,13 @@
 import { StrapiResponseDto } from './strapi-response.dto';
+import { StrapiMediaDto } from './strapi-media.dto';
 
 export interface AnimalStrapiAttributesDto {
   name: string;
-  age: number;
+  estimatedAge: number;
   description: string;
   species: string;
   adoptionStatus: string;
-  photoUrl: string;
+  photo: StrapiMediaDto;
 }
 
 export type AnimalsStrapiResponseDto = StrapiResponseDto<AnimalStrapiAttributesDto>;

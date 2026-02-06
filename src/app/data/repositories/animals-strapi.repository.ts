@@ -20,7 +20,7 @@ export class AnimalsStrapiRepository implements AnimalsRepository {
   constructor(private readonly api: ApiClientService) {}
 
   getAll(): Observable<Animal[]> {
-    const url = `${this.baseUrl}/animals`;
+    const url = `${this.baseUrl}/animals?populate=photo`;
 
     return this.api.get<AnimalsStrapiResponseDto>(url).pipe(
       map((res) => res.data.map(mapAnimalFromStrapiEntity))
@@ -28,7 +28,7 @@ export class AnimalsStrapiRepository implements AnimalsRepository {
   }
 
   getById(id: string): Observable<Animal | null> {
-    const url = `${this.baseUrl}/animals/${id}`;
+    const url = `${this.baseUrl}/animals/${id}?populate=photo`;
 
     return this.api.get<StrapiSingleResponseDto<AnimalStrapiAttributesDto>>(url).pipe(
       map((res) => {
